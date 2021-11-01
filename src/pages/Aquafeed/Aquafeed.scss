@@ -1,0 +1,41 @@
+.aquafeed {
+  width: 100vw;
+  padding-top: 77px;
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    h2 {
+      margin: 0 0 7px 0;
+      color: #0f2652;
+    }
+    img {
+      margin: 17px 0;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    p{
+      color: #0f2652;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (min-width: 678px) {
+  .aquafeed {
+    .content {
+      width: 60%;
+      img {
+        height: 400px;
+      }
+      p {
+        font-size: 17px;
+        line-height: 27px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.team {
+  margin-top: 55px;
+  width: 90vw;
+  margin: auto;
+  .team-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .text {
+      width: 90%;
+      margin-top: 10px;
+      margin-bottom: 27px;
+      h2 {
+        margin: 7px 0 0 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 678px) {
+  .home {
+    .team {
+      margin-top: 90px;
+      width: 80vw;
+      .team-wrapper {
+        flex-direction: row;
+        .text {
+          width: 27%;
+        }
+      }
+    }
+  }
+}

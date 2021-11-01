@@ -1,0 +1,19 @@
+.advisoryboard {
+    margin: auto;
+    width: 90vw;
+    h1 {
+      margin: 0 0 27px 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 678px) {
+    .home {
+      .advisoryboard {
+        width: 80vw;
+        margin-top: 90px;
+      }
+    }
+  }

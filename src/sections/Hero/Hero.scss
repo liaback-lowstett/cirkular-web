@@ -1,0 +1,25 @@
+.header {
+    .image-container {
+      height: 100vh;
+      display: block;
+      .image {
+        position: inherit;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: left bottom;
+        background-color: #fff;
+        padding: 9px;
+      }
+    }
+    .text-container {
+      position: absolute;
+      left: 60px;
+      bottom: 45px;
+      width: 50%;
+      h1,
+      h3 {
+        color: #fff;
+      }
+    }
+  }
