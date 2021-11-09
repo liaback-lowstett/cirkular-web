@@ -1,4 +1,3 @@
-import React from "react";
 import "./Platform.scss";
 import "../../variables.scss";
 import Nav from "../../components/Nav/Nav";

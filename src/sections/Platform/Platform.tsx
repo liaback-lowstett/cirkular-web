@@ -1,20 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Platform.scss";
 
 import moldimg from "../../assets/mold.jpg";
 
-interface PlatformProps {
-  ref: any;
-}
 
-const Platform: React.FC<PlatformProps> = ({ ref }) => {
+const Platform: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
   return (
-    <section className="techplatform" ref={ref}> 
+    <section className="techplatform"> 
       <div className="content-wrapper">
         <img className="image" src={moldimg} alt="mold" />
         <div className="text">

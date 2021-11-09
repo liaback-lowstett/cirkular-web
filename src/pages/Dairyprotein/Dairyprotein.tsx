@@ -1,4 +1,3 @@
-import React from "react";
 import "./Dairyprotein.scss";
 import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";

@@ -1,5 +1,3 @@
-import { useInView } from "react-intersection-observer";
-
 import "./Home.scss";
 import Nav from "../../components/Nav/Nav";
 import Hero from "../../sections/Hero/Hero";
@@ -11,16 +9,13 @@ import AdvisoryBoard from "../../sections/AdvisoryBoard/AdvisoryBoard";
 import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
-  //const [ref, inView] = useInView({ threshold: 0 });
-  const [lightNavRef, lightNavInView] = useInView({ threshold: 0 });
-  const [darkNavRef, darkNavInView] = useInView({ threshold: 0 });
 
   return (
     <>
       <Nav/>
       <div className="home">
-        <Hero ref={lightNavRef}/>
-        <Platform ref={darkNavRef}/>
+        <Hero />
+        <Platform />
         <Usecases />
         <Quote />
         <Team />

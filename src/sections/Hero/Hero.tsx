@@ -3,15 +3,10 @@ import "./Hero.scss";
 
 import heroimg from "../../assets/hero.jpg";
 
-interface HeroProps {
-  ref: any;
-  //inView: boolean;
 
-}
-
-const Hero: React.FC<HeroProps> = ({ ref }) => {
+const Hero: React.FC = () => {
   return (
-    <header className="header" ref={ref}>
+    <header className="header">
       <picture className="image-container">
         <img className="image" src={heroimg} alt="abstract background" />
       </picture>
