@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 import "../../variables.scss";
@@ -43,6 +42,13 @@ const Nav = () => {
           onClick={scrollToTop}
         >
           <li>Dairy Protein</li>
+        </Link>
+        <Link
+          aria-label="navigation career"
+          to="/career"
+          onClick={scrollToTop}
+        >
+        <li>Career</li>
         </Link>
       </ul>
     </nav>
