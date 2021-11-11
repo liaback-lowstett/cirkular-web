@@ -4,10 +4,12 @@ nav {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-  padding: 7px 27px;
+  padding: 0 27px;
   z-index: 1001;
   position: fixed;
   width: 100%;
+  height: fit-content;
+  background-color: #fff;
   .link {
     text-decoration: none;
   }

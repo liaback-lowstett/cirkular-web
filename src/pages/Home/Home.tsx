@@ -1,5 +1,5 @@
 import "./Home.scss";
-import Nav from "../../components/Navbar/Navbar";
+import Nav from "../../components/Nav/Nav";
 import Hero from "../../sections/Hero/Hero";
 import Platform from "../../sections/Platform/Platform";
 import Usecases from "../../sections/Usecases/Usecases";
