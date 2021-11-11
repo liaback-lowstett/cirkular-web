@@ -1,0 +1,14 @@
+.accordion-item {
+    border-bottom: 1px solid #0f275244;
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    p {
+        font-weight: 700;
+    }
+  }
+  .accordion-content{
+    margin: 0 0 17px 0;
+  }
+}

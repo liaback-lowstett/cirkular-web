@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./Usecases.scss";
 
@@ -19,11 +18,11 @@ const Usecases = () => {
           <img className="image" src={fishfeedimg} alt="fishfeed" />
           <div className="text">
             <h3>AQUAFEED</h3>
-            <h3>
+            <p>
               We are producing fungal proteins that are promising candidates for
               aquafeed. Our proteins are highly competitive with existing
               state-of-the-art aquafeed, such as fish meal and soy meal.
-            </h3>
+            </p>
             <Link
               aria-label="navigation aquafeed"
               to="/aquafeed"
@@ -37,11 +36,11 @@ const Usecases = () => {
           <img className="image" src={dairyimg} alt="dairy proteins" />
           <div className="text">
             <h3>DAIRY PROTEINS</h3>
-            <h3>
+            <p>
               Our fungi are engineered to produce casein - milk protein - which
               can be used by dairy producers and vegan companies to develop
               better animal-free cheese, yoghurts and beyond.
-            </h3>
+            </p>
             <Link
               aria-label="navigation dairy protein"
               to="/dairyprotein"
