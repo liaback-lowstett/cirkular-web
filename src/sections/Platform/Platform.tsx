@@ -4,14 +4,13 @@ import "./Platform.scss";
 
 import moldimg from "../../assets/mold.jpg";
 
-
 const Platform: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
   return (
-    <section className="techplatform"> 
+    <section className="techplatform">
       <div className="content-wrapper">
         <img className="image" src={moldimg} alt="mold" />
         <div className="text">
@@ -21,13 +20,13 @@ const Platform: React.FC = () => {
             produce sustainable, inexpensive, and high-quality proteins for the
             feed and food industry.
           </h4>
-          <Link
-            aria-label="navigation platform"
-            to="/platform"
-            onClick={scrollToTop}
-          >
-            <button>Learn more</button>
-          </Link>
+            <Link
+              aria-label="navigation platform"
+              to="/platform"
+              onClick={scrollToTop}
+            >
+              <button>Learn more</button>
+            </Link>
         </div>
       </div>
     </section>

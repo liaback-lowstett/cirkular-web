@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
-import { ReactComponent as CirkularLogo } from "../../../assets/logo_blue.svg";
 import { ReactComponent as Close } from "../../../assets/close.svg";
 
 export interface SidebarProps {
   open: boolean;
   toggleState: () => void;
 }
-
+// Sidebar items
 const Sidebar: React.FC<SidebarProps> = ({ open, toggleState }) => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className={`sidebar-container ${open ? "open" : ""}`}>
       <div className="sidebar-background" onClick={toggleState} />
       <div className="sidebar">
         <div className="sidebar-navigation side-margin">
-          <CirkularLogo />
           <button
             aria-label="close sidebar"
             className="sidebar-close"
@@ -25,11 +26,11 @@ const Sidebar: React.FC<SidebarProps> = ({ open, toggleState }) => {
           </button>
         </div>
         <div className="sidebar-menu-items side-margin">
-          <Link to="/">Hem</Link>
-          <Link to="/platform">Tech Platform</Link>
-          <Link to="/aquafeed">Aquafeed</Link>
-          <Link to="/dairyprotein">Dairy Protein</Link>
-          <Link to="/career">Career</Link>
+          <Link to="/" onClick={scrollToTop}>Hom</Link>
+          <Link to="/platform" onClick={scrollToTop}>Tech Platform</Link>
+          <Link to="/aquafeed" onClick={scrollToTop}>Aquafeed</Link>
+          <Link to="/dairyprotein"onClick={scrollToTop}>Dairy Protein</Link>
+          <Link to="/career"onClick={scrollToTop}>Career</Link>
         </div>
       </div>
     </div>

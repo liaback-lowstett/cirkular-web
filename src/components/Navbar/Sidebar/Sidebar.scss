@@ -21,7 +21,7 @@
 
     .sidebar-navigation {
       display: flex;
-      justify-content: space-between;
+      justify-content: end;
       margin-top: 16px;
       margin-bottom: 16px;
       height: 5%;
@@ -49,16 +49,7 @@
         text-decoration: none;
       }
     }
-
-    .social-media {
-      margin-top: 40px;
-
-      a:first-child {
-        margin-right: 8px;
-      }
-    }
   }
-
   &.open {
     right: 0;
 

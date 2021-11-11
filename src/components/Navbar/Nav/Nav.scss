@@ -11,10 +11,12 @@
     grid-auto-flow: column;
     grid-gap: 3vw;
     a {
-      color:$classic-blue;
+      color: $classic-blue;
       font-size: 17px;
       text-decoration: none;
-      
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

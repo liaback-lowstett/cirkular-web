@@ -1,6 +1,6 @@
 .dairyprotein {
     width: 100vw;
-    padding-top: 77px;
+    padding-top: 100px;
     .content {
       width: 80%;
       display: flex;
@@ -28,13 +28,20 @@
   @media (min-width: 678px) {
     .dairyprotein {
       .content {
-        width: 60%;
+        flex-direction: row;
+        width: 80%;
         img {
-          height: 400px;
+          height: auto;
+          width: 50%;
+          margin: 0 17px 0 0;
+        }
+        h3 {
+          margin: 0 0 17px 0;
         }
         p {
-          font-size: 17px;
+          font-size: 14px;
           line-height: 27px;
+          margin: 17px 0 0 0;
         }
       }
     }
