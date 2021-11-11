@@ -1,0 +1,77 @@
+@import "../../../variables.scss";
+
+.sidebar-container {
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.5s;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  right: -100vw;
+
+  .side-margin {
+    padding-left: $spacing-m;
+    padding-right: $spacing-m;
+  }
+
+  .sidebar {
+    background-color: $classic-blue;
+    width: 100vw;
+
+    .sidebar-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      height: 5%;
+
+      .sidebar-close {
+        background: none;
+        color: white;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+    }
+
+    .sidebar-menu-items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 64px;
+      align-items: end;
+
+      a {
+        color: white;
+        height: 40px;
+        text-decoration: none;
+      }
+    }
+
+    .social-media {
+      margin-top: 40px;
+
+      a:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &.open {
+    right: 0;
+
+    .sidebar-background {
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar-container .sidebar {
+    width: 100vw;
+  }
+}

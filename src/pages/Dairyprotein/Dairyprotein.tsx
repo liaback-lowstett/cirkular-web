@@ -1,5 +1,5 @@
 import "./Dairyprotein.scss";
-import Nav from "../../components/Nav/Nav";
+import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 import dairyimg from "../../assets/dairy.jpg";

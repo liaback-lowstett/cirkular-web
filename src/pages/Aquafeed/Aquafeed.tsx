@@ -1,5 +1,5 @@
 import "./Aquafeed.scss";
-import Nav from "../../components/Nav/Nav";
+import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 import fishfeedimg from "../../assets/fishfeed.jpg";

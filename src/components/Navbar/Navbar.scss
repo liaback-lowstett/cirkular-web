@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.navbar {
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  height: $navbar-height;
+  justify-content: space-between;
+  padding: 8px $spacing-m;
+  width: 100%;
+  z-index: 1001;
+  position: fixed;
+  svg {
+    width: 27px;
+  }
+}

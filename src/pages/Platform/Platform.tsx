@@ -1,6 +1,6 @@
 import "./Platform.scss";
 import "../../variables.scss";
-import Nav from "../../components/Nav/Nav";
+import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 import moldimg from "../../assets/mold.jpg";
