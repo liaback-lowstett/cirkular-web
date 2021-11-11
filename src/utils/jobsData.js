@@ -5,7 +5,7 @@ export const jobsData = [
         article:'/head-of-strain-engineering.pdf'
     },
     {
-        title: 'Head of Fermentation',
+        title: 'Head of Fermentation & Bioprocess Engineering',
         location: 'Lund',
         article:'/head-of-fermentation.pdf'
     },
