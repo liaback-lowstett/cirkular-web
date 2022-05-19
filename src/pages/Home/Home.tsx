@@ -7,23 +7,31 @@ import Quote from "../../sections/Quote/Quote";
 import Team from "../../sections/Team/Team";
 import AdvisoryBoard from "../../sections/AdvisoryBoard/AdvisoryBoard";
 import Footer from "../../components/Footer/Footer";
+import { useFetch } from "../../hooks/useFetch";
+import { HomeResult } from "./utils";
 
 const Home = () => {
+  const { data } = useFetch<Array<any>>(
+    `${process.env.REACT_APP_API_PAGES}=home`
+  );
+  const result: HomeResult = data && data?.length > 0 && data[0].acf;
 
-  return (
+  return result ? (
     <>
-      <Nav/>
+      <Nav />
       <div className="home">
-        <Hero />
-        <Platform />
-        <Usecases />
-        <Quote />
-        <Team />
-        <AdvisoryBoard />
+        <Hero {...result.landing} />
+        <Platform {...result.techPlatform} />
+        <Usecases {...result.useCase} />
+        <Quote {...result.divider} />
+        <Team {...result.team} />
+        <AdvisoryBoard {...result.advisoryBoard} />
       </div>
       <Footer />
     </>
+  ) : (
+    <p>Loading</p>
   );
-}
+};
 
 export default Home;

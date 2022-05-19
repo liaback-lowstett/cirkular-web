@@ -1,34 +1,32 @@
 import "./Dairyprotein.scss";
 import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-
-import dairyimg from "../../assets/dairy.jpg";
+import { DairyproteinResult } from "./utils";
+import { useFetch } from "../../hooks/useFetch";
 
 const Dairyprotein = () => {
-  return (
+  const { data } = useFetch<Array<any>>(
+    `${process.env.REACT_APP_API_PAGES}=dairy-protein`
+  );
+  const result: DairyproteinResult = data && data?.length > 0 && data[0].acf;
+
+  return result ? (
     <>
       <Nav />
       <div className="dairyprotein">
         <div className="content">
-          <img src={dairyimg} alt="fishfeed" />
+          <img src={result.image.url} alt="fishfeed" />
           <div className="text">
             <h3>USE CASE</h3>
-            <h2>Dairy Protein</h2>
-            <p>
-              Dairy production is putting immense pressure on the environment.
-              As a consequence, alternative sources of producing sustainable
-              dairy products is one of the fastest growing industries and the
-              industry is actively looking at alternative proteins to develop
-              animal-free products. Our fungi are engineered to produce casein -
-              milk protein - which can be used by dairy producers and vegan
-              companies to develop better animal-free cheese, yoghurts and
-              beyond.
-            </p>
+            <h2>{result.header}</h2>
+            <p>{result.description}</p>
           </div>
         </div>
       </div>
       <Footer />
     </>
+  ) : (
+    <p>Loading</p>
   );
 };
 

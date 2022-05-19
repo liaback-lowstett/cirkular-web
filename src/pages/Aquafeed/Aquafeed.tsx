@@ -1,35 +1,32 @@
 import "./Aquafeed.scss";
 import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-
-import fishfeedimg from "../../assets/fishfeed.jpg";
+import { useFetch } from "../../hooks/useFetch";
+import { AquafeedResult } from "./utils";
 
 const Aquafeed = () => {
-  return (
+  const { data } = useFetch<Array<any>>(
+    `${process.env.REACT_APP_API_PAGES}=aquafeed`
+  );
+  const result: AquafeedResult = data && data?.length > 0 && data[0].acf;
+
+  return result ? (
     <>
       <Nav />
       <div className="aquafeed">
         <div className="content">
-          <img src={fishfeedimg} alt="aquafeed" />
+          <img src={result.image.url} alt="aquafeed" />
           <div className="text">
             <h3>USE CASE</h3>
-            <h2>Aquafeed</h2>
-            <p>
-              As the oceans are getting depleted on fish, we need to find other
-              ways of producing fish and aquaculture production is meeting this
-              demand. Growing at a tremendous rate, this industry is in great
-              need of sourcing and utilizing sustainable aquafeed. We are
-              producing fungal proteins that are promising candidates for
-              aquafeed. Our proteins are highly competitive with existing
-              state-of-the-art aquafeed, such as fish meal and soy meal. Our
-              proteins are inexpensive, nutritious, without plant anti-nutrients
-              and can be produced in very high volumes.
-            </p>
+            <h2>{result.header}</h2>
+            <p>{result.description}</p>
           </div>
         </div>
       </div>
       <Footer />
     </>
+  ) : (
+    <p>Loading</p>
   );
 };
 

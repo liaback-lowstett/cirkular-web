@@ -1,15 +1,22 @@
 import React from "react";
 import "./Quote.scss";
 
-import orangeimg from "../../assets/orange.jpg";
+import { HomeResult } from "../../pages/Home/utils";
 
-const Quote = () => {
+const Quote: React.FC<HomeResult["divider"]> = ({
+  dividerImage,
+  dividerText,
+}) => {
   return (
     <section className="quote">
       <picture>
-        <img className="image" src={orangeimg} alt="abstract background" />
+        <img
+          className="image"
+          src={dividerImage.url}
+          alt="abstract background"
+        />
       </picture>
-      <h2>Revolutionizing tomorrow’s food system</h2>
+      <h2>{dividerText}</h2>
     </section>
   );
 };
