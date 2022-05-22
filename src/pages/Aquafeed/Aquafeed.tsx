@@ -26,7 +26,7 @@ const Aquafeed = () => {
       <Footer />
     </>
   ) : (
-    <p>Loading</p>
+    <></>
   );
 };
 

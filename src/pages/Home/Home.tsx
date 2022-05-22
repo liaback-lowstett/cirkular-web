@@ -30,7 +30,7 @@ const Home = () => {
       <Footer />
     </>
   ) : (
-    <p>Loading</p>
+    <></>
   );
 };
 

@@ -58,7 +58,7 @@ const Platform = () => {
       <Footer />
     </>
   ) : (
-    <p>Loading</p>
+    <></>
   );
 };
 

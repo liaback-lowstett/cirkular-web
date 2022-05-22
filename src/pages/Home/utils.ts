@@ -2,6 +2,7 @@ export interface HomeResult {
   landing: {
     landingHeader: string;
     landingSubheader: string;
+    landingImage: { url: string };
   };
   techPlatform: {
     techPlatformHeader: string;

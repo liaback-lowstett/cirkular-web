@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, toggleState }) => {
           </button>
         </div>
         <div className="sidebar-menu-items side-margin">
-          <Link to="/" onClick={scrollToTop}>Hom</Link>
+          <Link to="/" onClick={scrollToTop}>Home</Link>
           <Link to="/platform" onClick={scrollToTop}>Tech Platform</Link>
           <Link to="/aquafeed" onClick={scrollToTop}>Aquafeed</Link>
           <Link to="/dairyprotein"onClick={scrollToTop}>Dairy Protein</Link>

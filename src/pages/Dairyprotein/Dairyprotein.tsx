@@ -26,7 +26,7 @@ const Dairyprotein = () => {
       <Footer />
     </>
   ) : (
-    <p>Loading</p>
+    <></>
   );
 };
 

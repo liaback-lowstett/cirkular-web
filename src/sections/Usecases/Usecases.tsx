@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Usecases.scss";
 
-import fishfeedimg from "../../assets/fishfeed.jpg";
-import dairyimg from "../../assets/dairy.jpg";
 import { HomeResult } from "../../pages/Home/utils";
 
 const Usecases: React.FC<HomeResult["useCase"]> = ({

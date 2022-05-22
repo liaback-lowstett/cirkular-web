@@ -47,7 +47,7 @@ const Career = () => {
       <Footer />
     </>
   ) : (
-    <p>Loading</p>
+    <></>
   );
 };
 
